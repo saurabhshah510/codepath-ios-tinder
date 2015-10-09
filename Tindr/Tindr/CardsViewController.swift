@@ -12,11 +12,12 @@ class CardsViewController: UIViewController {
 
     @IBOutlet weak var navImagView: UIImageView!
     @IBOutlet weak var actionImageView: UIImageView!
-    @IBOutlet weak var cardImageView: UIImageView!
     
+    @IBOutlet weak var cardDraggableView: DraggableImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
 
@@ -25,18 +26,6 @@ class CardsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func onPanCardImageView(panGestureRecognizer: UIPanGestureRecognizer) {
-        let point = panGestureRecognizer.locationInView(self.cardImageView)
-        
-        if panGestureRecognizer.state == UIGestureRecognizerState.Began {
-            print("Gesture began at: \(point)")
-        } else if panGestureRecognizer.state == UIGestureRecognizerState.Changed {
-            print("Gesture changed at: \(point)")
-        } else if panGestureRecognizer.state == UIGestureRecognizerState.Ended {
-            print("Gesture ended at: \(point)")
-        }
-    }
-
     /*
     // MARK: - Navigation
 

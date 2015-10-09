@@ -20,21 +20,18 @@
                                 <rect key="frame" x="73" y="486" width="184" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ryan" id="8O7-0R-yJI">
-                                <rect key="frame" x="20" y="100" width="280" height="364"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="oi0-TU-MQN" appends="YES" id="tTY-Vg-PBw"/>
-                                </connections>
-                            </imageView>
+                            <view contentMode="scaleToFill" id="kZo-WS-L74" customClass="DraggableImageView" customModule="Tindr" customModuleProvider="target">
+                                <rect key="frame" x="20" y="105" width="280" height="360"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="mzo-jM-RMs"/>
                     <connections>
                         <outlet property="actionImageView" destination="Hza-he-bt2" id="nzb-oQ-lTR"/>
-                        <outlet property="cardImageView" destination="8O7-0R-yJI" id="scs-sa-omY"/>
+                        <outlet property="cardDraggableView" destination="kZo-WS-L74" id="N5R-Y9-7fr"/>
                         <outlet property="navImagView" destination="JSG-0O-B1w" id="CaB-jy-IOA"/>
                     </connections>
                 </viewController>
@@ -51,6 +48,5 @@
     <resources>
         <image name="action_button" width="320" height="108"/>
         <image name="nav_bar" width="320" height="65"/>
-        <image name="ryan" width="224" height="257"/>
     </resources>
 </document>

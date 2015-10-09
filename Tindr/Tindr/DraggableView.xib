@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9046" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9035"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DraggableImageView" customModule="Tindr" customModuleProvider="target">
+            <connections>
+                <outlet property="cardImageView" destination="pvd-1E-pAV" id="Tlb-gW-Zyr"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="Bsq-cN-rlT"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ryan" id="pvd-1E-pAV">
+                    <rect key="frame" x="8" y="8" width="304" height="552"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="oMU-mb-bNt" appends="YES" id="mnC-zU-kPp"/>
+                    </connections>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <point key="canvasLocation" x="413" y="300"/>
+        </view>
+        <panGestureRecognizer minimumNumberOfTouches="1" id="oMU-mb-bNt">
+            <connections>
+                <action selector="onPanCardImageView:" destination="-1" id="79Y-pu-nPc"/>
+            </connections>
+        </panGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="ryan" width="224" height="257"/>
+    </resources>
+</document>
